@@ -17,9 +17,24 @@ class App extends Component {
               </div>
               <div className="post-footer">
                 <div className="post-subreddit">/r/aww</div>
-                <div className="post-user">u/JoseTwitterFan</div>
+                <div className="post-user">posted by u/JoseTwitterFan</div>
                 <div className="post-comments">282 comments</div>
                 <div className="post-time">posted 2 hours ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="post">
+            <div className="post-upvotes">93.1k</div>
+            <div className="post-info">
+              <div className="post-title">
+                My cousin was the Queen of petty revenge and she is my biggest hero.
+              </div>
+              <div className="post-footer">
+                <div className="post-subreddit">/r/aww</div>
+                <div className="post-user">posted by u/RedRaiderReefer</div>
+                <div className="post-comments">217 comments</div>
+                <div className="post-time">posted 1 hour ago</div>
               </div>
             </div>
           </div>
