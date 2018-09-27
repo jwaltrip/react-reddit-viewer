@@ -20,20 +20,29 @@
   background-color: salmon;
   padding: 5px;
   min-width: 50px;
+  font-family: 'Open Sans', sans-serif;
 }
 
+.post-info {
+  width: 100%;
+}
 
 .post-title {
-  background-color: aquamarine;
+  background-color: #fff;
   padding: 5px 5px 5px 10px;
   text-align: left;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em ;
 }
 
 .post-footer {
   display: flex;
-  background-color: antiquewhite;
-  padding: 0 5px 5px 5px;
+  background-color: #fff;
+  padding: 0 5px 2px 5px;
   font-size: 0.85em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 .post-footer div {

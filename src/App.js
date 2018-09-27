@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Post from "./components/Post";
+import moment from 'moment';
+import humanFormat from 'human-format';
 
 class App extends Component {
   state = {
@@ -27,19 +29,29 @@ class App extends Component {
         const postUrls = data.data.children.map(item => item.data.url);
         const timesCreated = data.data.children.map(item => item.data.created);
 
+        // check if post is a video, if so, get stream url
+        const areVideos = data.data.children.map(item => item.data.is_video);
+        const videoUrls = data.data.children.map(item => {
+          if (item.data.is_video) return item.data.media.reddit_video.scrubber_media_url;
+        });
+
         // create custom post object to hold filtered values
         const posts = [];
 
         for (let i=0; i<24; i++) {
           const post = {};
-          post.upvotes = upvotes[i];
+          post.upvotes = humanFormat(upvotes[i], { decimals: 1 });
           post.title = titles[i];
           post.subreddit = subreddits[i];
           post.user = users[i];
           post.numComments = numComments[i];
           post.commentLink = commentsLinks[i];
           post.url = postUrls[i];
-          post.created = timesCreated[i];
+          // use moment.js to calculate time diff, resulting str format: "1 hour", "5 hours", "3 days"
+          post.created = moment.unix(timesCreated[i]).fromNow(true);
+
+          post.isVideo = areVideos[i];
+          post.videoUrl = videoUrls[i];
 
           posts.push(post);
         }
@@ -58,12 +70,16 @@ class App extends Component {
       return (
         <Post
           key={idx}
-          upvotes={post.upvotes}
           postTitle={post.title}
+          url={post.url}
+          upvotes={post.upvotes}
           subReddit={post.subreddit}
           userSubmitted={post.user}
           numComments={post.numComments}
+          commentsLink={post.commentLink}
           timePosted={post.created}
+          isVideo={post.isVideo}
+          videoUrl={post.videoUrl}
         />
       );
     });

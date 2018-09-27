@@ -6,11 +6,17 @@ body {
 
 .App {
   text-align: center;
-  width: 75%;
+  width: 60%;
   margin: 0 auto 0 auto;
 }
 
+.App h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 27pt;
+}
+
 .active-subreddit-name {
+  font-family: 'Lato', sans-serif;
   font-size: 20pt;
   text-align: left;
   padding: 0 0 15px 15px;
