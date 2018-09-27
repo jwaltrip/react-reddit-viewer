@@ -33,6 +33,7 @@ class App extends Component {
         const areVideos = data.data.children.map(item => item.data.is_video);
         const videoUrls = data.data.children.map(item => {
           if (item.data.is_video) return item.data.media.reddit_video.scrubber_media_url;
+          else return '';
         });
 
         // create custom post object to hold filtered values
@@ -52,6 +53,9 @@ class App extends Component {
 
           post.isVideo = areVideos[i];
           post.videoUrl = videoUrls[i];
+
+          // state var to see if post has been visited by user
+          post.hasVisited = false;
 
           posts.push(post);
         }
