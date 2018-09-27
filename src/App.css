@@ -1,3 +1,9 @@
+body {
+  background-color: #fcffff;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
 .App {
   text-align: center;
   width: 75%;
@@ -8,38 +14,4 @@
   font-size: 20pt;
   text-align: left;
   padding: 0 0 15px 15px;
-}
-
-.post-container {
-  width: 100%;
-  /*margin: 0 auto 0 auto;*/
-}
-
-.post {
-  display: flex;
-  flex-direction: row;
-  background-color: #d3d3d3;
-  margin: 0 0 25px 0;
-}
-
-.post-upvotes {
-  background-color: salmon;
-  padding: 5px;
-  align-self: center;
-}
-
-.post-title {
-  background-color: aquamarine;
-  padding: 5px 5px 5px 10px;
-}
-
-.post-footer {
-  display: flex;
-  background-color: antiquewhite;
-  padding: 5px;
-  font-size: 0.85em;
-}
-
-.post-footer div {
-  padding: 0 5px 0 5px;
 }

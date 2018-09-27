@@ -1,0 +1,41 @@
+/* POST COMPONENT CSS */
+
+.post-container {
+  width: 100%;
+  /*margin: 0 auto 0 auto;*/
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  background-color: #fefefe;
+  margin: 0 0 25px 0;
+}
+
+.post-upvotes {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: salmon;
+  padding: 5px;
+  min-width: 50px;
+}
+
+
+.post-title {
+  background-color: aquamarine;
+  padding: 5px 5px 5px 10px;
+  text-align: left;
+}
+
+.post-footer {
+  display: flex;
+  background-color: antiquewhite;
+  padding: 0 5px 5px 5px;
+  font-size: 0.85em;
+}
+
+.post-footer div {
+  padding: 0 5px 0 5px;
+}
