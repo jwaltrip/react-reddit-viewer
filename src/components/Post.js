@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Post.css';
 
 const Post = (props) => {
@@ -20,9 +20,11 @@ const Post = (props) => {
           </div>
         </a>
         <div className="post-footer">
-          <div className="post-subreddit">{props.subReddit}</div>
+          <a href={baseUrl+'/'+props.subReddit} target="_blank">
+            <div className="post-subreddit">{props.subReddit}</div>
+          </a>
           <div className="post-user">posted by u/{props.userSubmitted}</div>
-          <a href={baseUrl + props.commentLink} target="_blank">
+          <a href={baseUrl + props.commentsLink} target="_blank">
             <div className="post-comments">
               {props.numComments} comments
             </div>

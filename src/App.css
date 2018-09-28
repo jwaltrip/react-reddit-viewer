@@ -1,6 +1,6 @@
 body {
-  background-color: #fcffff;
-  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  background-color: #F5F5F5;
+  /*background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");*/
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
@@ -16,7 +16,8 @@ body {
 }
 
 .active-subreddit-name {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
   font-size: 20pt;
   text-align: left;
   padding: 0 0 15px 15px;
@@ -24,53 +25,38 @@ body {
 
 .post-container {
   padding: 2em;
-  background-color: #fafafa;
+  background-color: #fff;
   margin-bottom: 50px;
+  -webkit-box-shadow: 1px 1px 17px -6px rgba(66,66,66,0.67);
+  -moz-box-shadow: 1px 1px 17px -6px rgba(66,66,66,0.67);
+  box-shadow: 1px 1px 17px -6px rgba(66,66,66,0.67);
+  border-radius: 7px;
 }
 
 .pagination-container {
   padding: 10px 10px 0 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
   /*margin-top: 10px;*/
 }
 
 .pagination-btn {
-  -moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
-  -webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
-  box-shadow:inset 0px 1px 3px 0px #91b8b3;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
-  background:-moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-  background:-webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-  background:-o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-  background:-ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-  background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
-  background-color:#768d87;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
-  border-radius:5px;
-  border:1px solid #566963;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:Arial;
-  font-size:15px;
-  font-weight:bold;
-  padding:7px 23px;
-  margin: 0 10px 0 10px;
-  text-decoration:none;
-  text-shadow:0px -1px 0px #2b665e;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #FFFFFF !important;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px #7CACDE;
+  box-shadow: 1px 1px 1px #BEE2F9;
+  padding: 7px 25px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: #29B6F6;
+  margin: 0 15px 0 15px;
 }
 .pagination-btn:hover {
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
-  background:-moz-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-  background:-webkit-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-  background:-o-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-  background:-ms-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-  background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87',GradientType=0);
-  background-color:#6c7c7c;
-}
-.pagination-btn:active {
-  position:relative;
-  top:1px;
+  color: #FFFFFF !important;
+  background: #03A9F4;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
 }

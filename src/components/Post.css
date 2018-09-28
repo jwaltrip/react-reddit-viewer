@@ -1,11 +1,13 @@
 /* POST COMPONENT CSS */
 
-
 .post {
   display: flex;
   flex-direction: row;
   background-color: #fefefe;
   margin: 0 0 10px 0;
+  -webkit-box-shadow: 1px 1px 17px -6px rgba(66,66,66,0.67);
+  -moz-box-shadow: 1px 1px 17px -6px rgba(66,66,66,0.67);
+  box-shadow: 1px 1px 17px -6px rgba(66,66,66,0.67);
 }
 
 .post-upvotes {
@@ -13,18 +15,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e0e0e0;
+  background-color: #B3E5FC;
   padding: 5px;
   min-width: 50px;
   font-family: 'Open Sans', sans-serif;
+  border-radius: 7px 0 0 7px;
 }
 
 .post-info {
   width: 100%;
+  border-radius: 0 7px 7px 0;
 }
 
 .post-title {
-  background-color: #f5f5f5;
+  /*background-color: #e4f5fe;*/
+  background-color: rgba(255,255,255,0);
   padding: 5px 5px 5px 10px;
   text-align: left;
   font-family: 'Ubuntu', sans-serif;
@@ -32,23 +37,58 @@
   font-size: 1.2em ;
 }
 
+.post-info {
+  background-color: #e4f5fe;
+}
+
 .post-info a {
   text-decoration: none;
+  color: #262626;
+}
+
+.post:hover .post-info {
+  background-color: #F5F5F5;
+  transition: 100ms ease-in-out;
+}
+
+.post:hover .post-upvotes {
+  background-color: #E0E0E0;
+  transition: 100ms ease-in-out;
 }
 
 .post-footer {
   display: flex;
-  background-color: #f5f5f5;
-  padding: 0 5px 2px 5px;
+  background-color: rgba(0,0,0,0);
+  padding: 0 5px 5px 5px;
   font-size: 0.85em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
+.post-footer:hover {
+  cursor: pointer;
+}
+
 .post-footer div {
-  padding: 0 5px 0 5px;
+  padding: 0 7px 0 7px;
+  /*margin: 0 5px 0 5px;*/
 }
 
 .post-user {
   color: rgba(0, 0, 0, 0.60);
+}
+
+.post-comments:hover {
+  background-color: #424242;
+  border-radius: 10px;
+  color: white;
+  transition: 100ms ease-in-out;
+  /*font-weight: 500;*/
+}
+
+.post-subreddit:hover {
+  background-color: #424242;
+  border-radius: 10px;
+  color: white;
+  transition: 100ms ease-in-out;
 }

@@ -123,7 +123,7 @@ class App extends Component {
         <h1>React Reddit Viewer</h1>
 
         <div className="post-container">
-          <div className="active-subreddit-name">/r/all</div>
+          <div className="active-subreddit-name">/r/all - page {this.state.currPage}</div>
 
           {this.listPosts()}
 
