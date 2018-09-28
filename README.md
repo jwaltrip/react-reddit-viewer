@@ -2,6 +2,9 @@
 
 This is a simple implementation that allows you to browse the "Hot" posts of Reddit's /r/all subreddit
 
+### See it in Action!
+https://jwaltrip.github.io/react-reddit-viewer
+
 ### Features
 * Has basic pagination capabilities (Next and Prev pagination)
 * Links to the media of the post (working for embedded reddit video links)
