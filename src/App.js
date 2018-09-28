@@ -14,6 +14,10 @@ class App extends Component {
     currPage: 1
   };
 
+  componentDidMount() {
+    this.getInitAllFeed();
+  }
+
   generateSlimPost(data) {
     // filter the large json object returned from reddit and only grab necessary info
     const upvotes = data.data.children.map(item => item.data.score);
@@ -60,7 +64,7 @@ class App extends Component {
   }
 
   getInitAllFeed() {
-    fetch('http://www.reddit.com/r/all/hot.json?count=25')
+    fetch('https://www.reddit.com/r/all/hot.json?count=25')
       .then(res => res.json())
       .then(data => {
         console.log('data', data);
@@ -72,7 +76,7 @@ class App extends Component {
   }
 
   getNextPage() {
-    fetch(`http://www.reddit.com/r/all/hot.json?after=${this.state.after}`)
+    fetch(`https://www.reddit.com/r/all/hot.json?after=${this.state.after}`)
       .then(res => res.json())
       .then(data => {
         console.log('data', data);
@@ -86,7 +90,7 @@ class App extends Component {
   }
 
   getPrevPage() {
-    fetch(`http://www.reddit.com/r/all/hot.json?before=${this.state.before}`)
+    fetch(`https://www.reddit.com/r/all/hot.json?before=${this.state.before}`)
       .then(res => res.json())
       .then(data => {
         console.log('data', data);
@@ -97,10 +101,6 @@ class App extends Component {
 
         this.scrollToTop();
       });
-  }
-
-  componentDidMount() {
-    this.getInitAllFeed();
   }
 
   scrollToTop() {
