@@ -3,6 +3,7 @@ import './App.css';
 import Post from "./components/Post";
 import moment from 'moment';
 import humanFormat from 'human-format';
+import Scroll from 'react-scroll';
 
 class App extends Component {
   state = {
@@ -78,6 +79,8 @@ class App extends Component {
         const posts = this.generateSlimPost(data);
 
         this.setState({after: after, before: before, posts: posts, currPage: this.state.currPage+1 });
+
+        this.scrollToTop();
       });
   }
 
@@ -90,11 +93,18 @@ class App extends Component {
         const posts = this.generateSlimPost(data);
 
         this.setState({after: after, before: before, posts: posts, currPage: this.state.currPage-1 });
+
+        this.scrollToTop();
       });
   }
 
   componentDidMount() {
     this.getInitAllFeed();
+  }
+
+  scrollToTop() {
+    const scroll = Scroll.animateScroll;
+    scroll.scrollToTop();
   }
 
   listPosts() {
