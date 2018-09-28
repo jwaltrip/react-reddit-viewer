@@ -60,3 +60,19 @@ body {
   transition: 200ms ease-in-out;
   cursor: pointer;
 }
+
+/* designed by footer text */
+.footer-made-by {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.9em;
+  color: #444;
+  margin: -15px 0 25px 0;
+}
+
+.footer-made-by a {
+  color: #2e6bcc;
+}
+.footer-made-by a:hover {
+  color: #004ecb;
+}

@@ -4,6 +4,7 @@ import Post from "./components/Post";
 import moment from 'moment';
 import humanFormat from 'human-format';
 import Scroll from 'react-scroll';
+import Footer from "./components/Footer";
 
 class App extends Component {
   state = {
@@ -143,6 +144,8 @@ class App extends Component {
             <button className="pagination-btn" onClick={this.getNextPage.bind(this)}>Next</button>
           </div>
         </div>
+
+        <Footer/>
 
       </div>
     );
